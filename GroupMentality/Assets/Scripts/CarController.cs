@@ -11,6 +11,7 @@ public class CarController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        StartCoroutine("DestroyCar");
     }
 
     void FixedUpdate()
@@ -18,5 +19,11 @@ public class CarController : MonoBehaviour
         Vector3 movement = Vector3.forward;
 
         rb.AddForce(movement * speed);
+    }
+
+    IEnumerator DestroyCar()
+    {
+        yield return new WaitForSeconds(4);
+        Destroy(gameObject);
     }
 }
