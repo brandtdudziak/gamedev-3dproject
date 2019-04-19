@@ -256,20 +256,20 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.22344004, y: -0, z: -0, w: 0.9747177}
-  m_LocalPosition: {x: 0, y: 8.65, z: -10}
+  m_LocalRotation: {x: 0.510626, y: 0.0009808169, z: -0.00008379659, w: 0.8598024}
+  m_LocalPosition: {x: 0.78, y: 17.91, z: -7.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 25.822, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 61.411003, y: 0.192, z: 0.10300001}
 --- !u!43 &1742107994
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1096
+  m_Name: pb_Mesh-1092
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -423,80 +423,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1001 &720665970490937424
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 720665971278792862, guid: 11ae38408411147e48ddb91857b81629,
-        type: 3}
-      propertyPath: m_Name
-      value: StudentSpawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 720665971278792832, guid: 11ae38408411147e48ddb91857b81629,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 720665971278792832, guid: 11ae38408411147e48ddb91857b81629,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.48635864
-      objectReference: {fileID: 0}
-    - target: {fileID: 720665971278792832, guid: 11ae38408411147e48ddb91857b81629,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.2845931
-      objectReference: {fileID: 0}
-    - target: {fileID: 720665971278792832, guid: 11ae38408411147e48ddb91857b81629,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 720665971278792832, guid: 11ae38408411147e48ddb91857b81629,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 720665971278792832, guid: 11ae38408411147e48ddb91857b81629,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 720665971278792832, guid: 11ae38408411147e48ddb91857b81629,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 720665971278792832, guid: 11ae38408411147e48ddb91857b81629,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 720665971278792832, guid: 11ae38408411147e48ddb91857b81629,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 720665971278792832, guid: 11ae38408411147e48ddb91857b81629,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 720665971278792832, guid: 11ae38408411147e48ddb91857b81629,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 720665971278792863, guid: 11ae38408411147e48ddb91857b81629,
-        type: 3}
-      propertyPath: numStudents
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 11ae38408411147e48ddb91857b81629, type: 3}
 --- !u!1001 &7443818223830627653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -579,5 +505,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1742107994}
+    - target: {fileID: 7078533826726916023, guid: b46d75aaadef743fda07c40508616bd0,
+        type: 3}
+      propertyPath: numStudents
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b46d75aaadef743fda07c40508616bd0, type: 3}
