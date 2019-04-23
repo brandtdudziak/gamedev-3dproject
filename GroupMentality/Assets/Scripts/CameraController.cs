@@ -1,4 +1,4 @@
-﻿// <copyright file="CameraController.cs" company="DIS Copenhagen">
+// <copyright file="CameraController.cs" company="DIS Copenhagen">
 // Copyright (c) 2017 All Rights Reserved
 // </copyright>
 // <author>Benno Lueders</author>
@@ -15,6 +15,17 @@ public class CameraController : MonoBehaviour
     public LayerMask obstacleLayerMask;
 
     public float distance = 10;
+    public float minVerticalAngle = -80;
+    public float maxVerticalAngle = 80;
+
+    public float verticalMouseSpeed;
+    public float horizontalMouseSpeed;
+    public float verticalArrowSpeed;
+    public float horizontalArrowSpeed;
+
+    public LayerMask obstacleLayerMask;
+
+
     public float minVerticalAngle = -80;
     public float maxVerticalAngle = 80;
 
