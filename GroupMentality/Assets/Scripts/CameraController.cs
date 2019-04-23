@@ -11,7 +11,17 @@ public class CameraController : MonoBehaviour
 {
 
     public Transform target;
-    public float distance = 5;
+
+    public LayerMask obstacleLayerMask;
+
+    public float distance = 10;
+    public float minVerticalAngle = -80;
+    public float maxVerticalAngle = 80;
+
+    public float verticalMouseSpeed;
+    public float horizontalMouseSpeed;
+    public float verticalArrowSpeed;
+    public float horizontalArrowSpeed;
 
     public LayerMask obstacleLayerMask;
 
@@ -65,6 +75,3 @@ public class CameraController : MonoBehaviour
         return targetToCamera;
     }
 }
-
-		
-
