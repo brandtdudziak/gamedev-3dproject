@@ -23,17 +23,6 @@ public class CameraController : MonoBehaviour
     public float verticalArrowSpeed;
     public float horizontalArrowSpeed;
 
-    public LayerMask obstacleLayerMask;
-
-
-    public float minVerticalAngle = -80;
-    public float maxVerticalAngle = 80;
-
-    public float verticalMouseSpeed;
-    public float horizontalMouseSpeed;
-    public float verticalArrowSpeed;
-    public float horizontalArrowSpeed;
-
     private float angleX;
     private float angleY;
 
