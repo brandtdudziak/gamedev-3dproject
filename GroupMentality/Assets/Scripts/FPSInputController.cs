@@ -14,7 +14,6 @@ public class FPSInputController : MonoBehaviour
 		motor = GetComponent<CharacterMotor> ();
 	}
 
-	// Update is called once per frame
 	void Update ()
 	{
 		// Get the input vector from keyboard or analog stick
