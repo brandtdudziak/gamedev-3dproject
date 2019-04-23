@@ -11,7 +11,7 @@ public class NormalStudent : Student
     void Start()
     {
         speed = 5f;
-        randomness = 2f;
+        randomness = 3f;
         minDistanceToFollow = 5f;
 
         rb3d = GetComponent<Rigidbody>();
@@ -21,7 +21,7 @@ public class NormalStudent : Student
     // Update is called once per frame
     void Update()
     {
-        rb3d.velocity = new Vector3(0, 0, 0);
+        //rb3d.velocity = new Vector3(0, 0, 0);
         Move();
     }
 

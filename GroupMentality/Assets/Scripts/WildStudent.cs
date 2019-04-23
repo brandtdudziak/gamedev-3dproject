@@ -76,8 +76,9 @@ public class WildStudent : Student
     public void ShapeShifterMovement()
     {
         speed = 5f;
-        float xdir = Random.Range(-5, 5);
-        float zdir = Random.Range(-5, 5);
+        float[] dirs = new float[] {-5, -2, 3, 5 };
+        float xdir = dirs[Random.Range(0, 3)];
+        float zdir = dirs[Random.Range(0, 3)];
         Vector3 pos = target.position + new Vector3(xdir, 0, zdir);
 
         Vector3 dir = pos - transform.position;
@@ -85,7 +86,6 @@ public class WildStudent : Student
         dir.Normalize();
 
         rb3d.velocity = dir * speed;
-
 
     }
 
@@ -108,7 +108,7 @@ public class WildStudent : Student
         // if player stops moving, then the rebel will overtake the player.
         if (target.GetComponent<Rigidbody>().velocity == new Vector3(0, 0, 0))
         {
-            Vector3 newTargetPos = target.position + new Vector3(3, 0, 5); // set new target position
+            Vector3 newTargetPos = target.position + new Vector3(3, 0, -5); // set new target position
 
             Vector3 newDirection = newTargetPos - transform.position; // find new direction
 
@@ -116,8 +116,8 @@ public class WildStudent : Student
 
             newDirection.Normalize();   // normalize direction
 
-            //rb3d.velocity = newDirection * speed; // set new velocity
-            transform.position = newTargetPos;
+            rb3d.velocity = newDirection * speed; // set new velocity
+            //transform.position = newTargetPos;
 
         }
 

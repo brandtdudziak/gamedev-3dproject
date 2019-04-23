@@ -7,6 +7,12 @@ public class PlayerController : MonoBehaviour
     public Transform cam;
     Vector2 input;
     bool isMoving = false;
+    Rigidbody rb3d;
+
+    private void Start()
+    {
+        rb3d = GetComponent<Rigidbody>();
+    }
 
     void FixedUpdate()
     {
@@ -21,7 +27,8 @@ public class PlayerController : MonoBehaviour
         camF = camF.normalized;
         camR = camR.normalized;
 
-        transform.position += (camF * input.y + camR * input.x) * Time.deltaTime * speed;
+        //transform.position += (camF * input.y + camR * input.x) * Time.deltaTime * speed;
+        rb3d.velocity = (camF * input.y + camR * input.x) * speed;
     }
 
     public bool IsMoving()
