@@ -16,7 +16,7 @@ public class WildStudent : Student
     /// <summary>
     /// The different types of the student.
     /// </summary>
-    private string[] studentType = new string[] { "Stubborn", "Shape Shifter", "Rebel" };
+    private string[] studentType = new string[] { "Stubborn", "ShapeShifter", "Rebel" };
 
     /// <summary>
     /// The type of the student.
@@ -24,20 +24,20 @@ public class WildStudent : Student
     /// Shape Shifter moves in the set direction, forwards and leftward every time
     /// Rebel alwas overtakes the teacher, and stops moving until the teacher overtakes them.
     /// </summary>
-    private string StudentType;
+    public string StudentType;
 
 
     // Start is called before the first frame update
     void Start()
     {
 
-        speed = Random.Range(0f, 15f);
-        randomness = Random.Range(1f, 18f);
-        wildness = speed;
+        speed = Random.Range(0f, 6f);
+
+        randomness = Random.Range(1f, 5f);
 
         int index = (int)Random.Range(0f, 2f);
-        StudentType = studentType[2];
 
+        wildness = index + 2;
 
         rb3d = GetComponent<Rigidbody>();
 
@@ -47,22 +47,20 @@ public class WildStudent : Student
     // Update is called once per frame
     void Update()
     {
-
         Move();
     }
 
     public override void Move()
     {
-        Debug.Log(StudentType);
-
-        switch (StudentType) {
+        switch (StudentType)
+        {
             case "Stubborn":
                 StubbornMovement();
                 break;
             case "Rebel":
                 RebelMovement();
                 break;
-            case "Shape Shifter":
+            case "ShapeShifter":
                 ShapeShifterMovement();
                 break;
         }
@@ -77,14 +75,26 @@ public class WildStudent : Student
     // Movement behavior for the Shape shifting wild student
     public void ShapeShifterMovement()
     {
+        speed = 5f;
+        float xdir = Random.Range(-5, 5);
+        float zdir = Random.Range(-5, 5);
+        Vector3 pos = target.position + new Vector3(xdir, 0, zdir);
+
+        Vector3 dir = pos - transform.position;
+
+        dir.Normalize();
+
+        rb3d.velocity = dir * speed;
+
 
     }
 
     // Movement behavior for the rebel wild student
     public void RebelMovement()
     {
+        speed = 5f;
 
-
+        randomness = 2f;
 
         Vector3 origin = transform.position;
 
@@ -92,26 +102,31 @@ public class WildStudent : Student
 
         float distanceToPlayer = direction.magnitude;
 
-        Debug.Log(distanceToPlayer);
-
         direction.Normalize();
 
 
-        if (distanceToPlayer > minDistanceToFollow)
+        // if player stops moving, then the rebel will overtake the player.
+        if (target.GetComponent<Rigidbody>().velocity == new Vector3(0, 0, 0))
         {
-            rb3d.velocity = sdirection * speed * randomness * wildness;
+            Vector3 newTargetPos = target.position + new Vector3(3, 0, 5); // set new target position
+
+            Vector3 newDirection = newTargetPos - transform.position; // find new direction
+
+            Debug.Log("I'm a rebel");
+
+            newDirection.Normalize();   // normalize direction
+
+            //rb3d.velocity = newDirection * speed; // set new velocity
+            transform.position = newTargetPos;
+
         }
 
-        else
+        // If player leaves the movement radius, then the rebel will follow.
+        else if (distanceToPlayer > minDistanceToFollow)
         {
-            if (target.GetComponent<Rigidbody>().velocity == new Vector3(0, 0, 0))
-            {
-                rb3d.velocity = direction * 2;
-            }
-
+            Debug.Log("Following Now!!");
+            rb3d.velocity = direction * speed * wildness * randomness;
         }
-
-
     }
 }
 

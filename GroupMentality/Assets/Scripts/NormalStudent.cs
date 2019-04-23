@@ -10,9 +10,9 @@ public class NormalStudent : Student
 
     void Start()
     {
-        speed = Random.Range(2f, 12f);
-        randomness = Random.Range(1f, 3f);
-        minDistanceToFollow = Random.Range(4f, 8f);
+        speed = 5f;
+        randomness = 2f;
+        minDistanceToFollow = 5f;
 
         rb3d = GetComponent<Rigidbody>();
 

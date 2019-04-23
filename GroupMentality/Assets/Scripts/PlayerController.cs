@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public Transform cam;
     Vector2 input;
+    bool isMoving = false;
 
     void FixedUpdate()
     {
@@ -22,4 +23,9 @@ public class PlayerController : MonoBehaviour
 
         transform.position += (camF * input.y + camR * input.x) * Time.deltaTime * speed;
     }
+
+    public bool IsMoving()
+    {
+        return isMoving;
+    } 
 }
