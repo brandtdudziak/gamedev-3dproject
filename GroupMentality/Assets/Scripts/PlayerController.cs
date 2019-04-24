@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        GameManager.instance.NextScene();
+        if(other.gameObject.CompareTag("Station"))
+        {
+            GameManager.instance.NextScene();
+        }
     }
 }
