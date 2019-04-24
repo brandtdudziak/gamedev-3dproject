@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1395909605221578953}
   - component: {fileID: 4771759952230429400}
   - component: {fileID: 7148360103432544508}
-  - component: {fileID: 610239799162304492}
+  - component: {fileID: 6580908832064674589}
   m_Layer: 0
   m_Name: Benno
   m_TagString: Untagged
@@ -95,7 +95,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &610239799162304492
+--- !u!114 &6580908832064674589
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4724142097176694519}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 941eb8346e363428fa9a82737b55a413, type: 3}
+  m_Script: {fileID: 11500000, guid: 3617ca787a8b4ed4388d83c2bc86c13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
@@ -121,7 +121,6 @@ GameObject:
   - component: {fileID: 5940128024037030162}
   - component: {fileID: 4931823717642348363}
   - component: {fileID: 4484995388256960567}
-  - component: {fileID: 5094107450582843742}
   m_Layer: 0
   m_Name: Cap
   m_TagString: Untagged
@@ -943,20 +942,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!64 &5094107450582843742
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8360879343105447132}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1001 &7510967214223927080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -972,7 +957,7 @@ PrefabInstance:
     - target: {fileID: 720665971278792832, guid: 11ae38408411147e48ddb91857b81629,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 720665971278792832, guid: 11ae38408411147e48ddb91857b81629,
         type: 3}

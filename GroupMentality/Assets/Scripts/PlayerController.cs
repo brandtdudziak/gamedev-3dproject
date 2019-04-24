@@ -21,5 +21,6 @@ public class PlayerController : MonoBehaviour
         camR = camR.normalized;
 
         transform.position += (camF * input.y + camR * input.x) * Time.deltaTime * speed;
+
     }
 }

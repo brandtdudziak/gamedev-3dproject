@@ -8,6 +8,7 @@ public class NormalStudent : Student
     public Transform target; // This is Benno's transform
     private Rigidbody rb3d;
 
+
     void Start()
     {
         speed = 5f;
@@ -15,7 +16,7 @@ public class NormalStudent : Student
         minDistanceToFollow = 5f;
 
         rb3d = GetComponent<Rigidbody>();
-
+        
     }
 
     // Update is called once per frame
