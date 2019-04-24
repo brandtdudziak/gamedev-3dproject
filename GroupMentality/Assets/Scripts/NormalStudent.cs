@@ -54,6 +54,7 @@ public class NormalStudent : Student
         else
         {
             Vector2 randomDir = SetTimer();
+            randomDir *= 5;
 
             rb3d.velocity = new Vector3(randomDir.x, 0, randomDir.y);
         }

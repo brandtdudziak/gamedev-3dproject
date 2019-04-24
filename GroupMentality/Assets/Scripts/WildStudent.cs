@@ -31,11 +31,11 @@ public class WildStudent : Student
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
+        player = GameObject.FindWithTag("Player"); // The player
 
-        target = player.GetComponent<Transform>();
+        target = player.GetComponent<Transform>(); // the transform of the player
 
-        speed = Random.Range(0f, 6f);
+        speed = Random.Range(0f, 6f); 
 
         randomness = Random.Range(1f, 5f);
 
