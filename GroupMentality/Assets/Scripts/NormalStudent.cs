@@ -53,12 +53,21 @@ public class NormalStudent : Student
 
         else
         {
-            rb3d.velocity = new Vector3(1, 0, -1);
+            Vector2 randomDir = SetTimer();
+
+            rb3d.velocity = new Vector3(randomDir.x, 0, randomDir.y);
         }
 
+    }
 
+    IEnumerator Timer ()
+    {
+        yield return new WaitForSecondsRealtime(7);
+    }
 
-
-
+    Vector2 SetTimer()
+    {
+        StartCoroutine(Timer());
+        return Random.insideUnitCircle;
     }
 }
