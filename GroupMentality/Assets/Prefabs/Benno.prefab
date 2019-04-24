@@ -12,7 +12,10 @@ GameObject:
   - component: {fileID: 1395909605221578953}
   - component: {fileID: 4771759952230429400}
   - component: {fileID: 7148360103432544508}
+<<<<<<< HEAD
   - component: {fileID: 6580908832064674589}
+=======
+>>>>>>> 29cdae6f5e85cf8412530f6ec5205241ac777bcc
   m_Layer: 0
   m_Name: Benno
   m_TagString: Untagged
@@ -95,6 +98,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!114 &6580908832064674589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   cam: {fileID: 0}
+=======
+>>>>>>> 29cdae6f5e85cf8412530f6ec5205241ac777bcc
 --- !u!1 &8360879343105447132
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,6 +955,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1338043984640790963}
     m_Modifications:
+    - target: {fileID: 720665971278792862, guid: 11ae38408411147e48ddb91857b81629,
+        type: 3}
+      propertyPath: m_Name
+      value: StudentSpawner
+      objectReference: {fileID: 0}
     - target: {fileID: 720665971278792832, guid: 11ae38408411147e48ddb91857b81629,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1003,11 +1014,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 720665971278792862, guid: 11ae38408411147e48ddb91857b81629,
-        type: 3}
-      propertyPath: m_Name
-      value: StudentSpawner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11ae38408411147e48ddb91857b81629, type: 3}

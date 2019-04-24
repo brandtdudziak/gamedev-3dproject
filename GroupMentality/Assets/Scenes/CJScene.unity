@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -374,16 +374,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 657364805}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c50af745c5bea240987dad2540b063b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9dbe99e8a512d4edbabafa5e4548c38a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 877109709}
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 0
-  distance: 10
-  minVerticalAngle: -90
-  maxVerticalAngle: 0
+  distance: 8
+  minVerticalAngle: -80
+  maxVerticalAngle: 80
   verticalMouseSpeed: 15
   horizontalMouseSpeed: 15
   verticalArrowSpeed: 8
@@ -569,7 +569,126 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 219572546}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!54 &877109710
+=======
+  m_GameObject: {fileID: 882622027}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c00394b5a5b346b4a82cd8e0aeadeb45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canControl: 1
+  useFixedUpdate: 1
+  movement:
+    maxForwardSpeed: 10
+    maxSidewaysSpeed: 10
+    maxBackwardsSpeed: 10
+    slopeSpeedMultiplier:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: -90
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 90
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    maxGroundAcceleration: 100
+    maxAirAcceleration: 20
+    gravity: 10
+    maxFallSpeed: 20
+    collisionFlags: 0
+    velocity: {x: 0, y: 0, z: 0}
+    frameVelocity: {x: 0, y: 0, z: 0}
+    hitPoint: {x: 0, y: 0, z: 0}
+    lastHitPoint: {x: Infinity, y: 0, z: 0}
+  jumping:
+    enabled: 1
+    baseHeight: 1
+    extraHeight: 4.1
+    perpAmount: 0
+    steepPerpAmount: 0.5
+    jumping: 0
+    holdingJumpButton: 0
+    lastStartTime: 0
+    lastButtonDownTime: -100
+    jumpDir: {x: 0, y: 1, z: 0}
+  movingPlatform:
+    enabled: 1
+    movementTransfer: 2
+    hitPlatform: {fileID: 0}
+    activePlatform: {fileID: 0}
+    activeLocalPoint: {x: 0, y: 0, z: 0}
+    activeGlobalPoint: {x: 0, y: 0, z: 0}
+    activeLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+    activeGlobalRotation: {x: 0, y: 0, z: 0, w: 0}
+    lastMatrix:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    platformVelocity: {x: 0, y: 0, z: 0}
+    newPlatform: 0
+  sliding:
+    enabled: 1
+    slidingSpeed: 15
+    sidewaysControl: 1
+    speedControl: 0.4
+  inputMoveDirection: {x: 0, y: 0, z: 0}
+  inputJump: 0
+  grounded: 1
+  groundNormal: {x: 0, y: 0, z: 0}
+  lastGroundNormal: {x: 0, y: 0, z: 0}
+--- !u!114 &882622034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882622027}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de41ee9d0909f4f4a8110d91a01352ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &882622035
+>>>>>>> 29cdae6f5e85cf8412530f6ec5205241ac777bcc
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1071,7 +1190,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: pb_Mesh-11570
+=======
+  m_Name: pb_Mesh-7368
+>>>>>>> 29cdae6f5e85cf8412530f6ec5205241ac777bcc
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1551,7 +1674,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: pb_Mesh-11578
+=======
+  m_Name: pb_Mesh-7398
+>>>>>>> 29cdae6f5e85cf8412530f6ec5205241ac777bcc
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1871,7 +1998,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: pb_Mesh-11554
+=======
+  m_Name: pb_Mesh-7388
+>>>>>>> 29cdae6f5e85cf8412530f6ec5205241ac777bcc
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -2037,6 +2168,61 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 5162041642023168994, guid: 555bce9d9f1404c098be83ebd4d619e4,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1196405480}
+    - target: {fileID: 5162041642023168999, guid: 555bce9d9f1404c098be83ebd4d619e4,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1196405480}
+    - target: {fileID: 5162041642195497993, guid: 555bce9d9f1404c098be83ebd4d619e4,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1598606605}
+    - target: {fileID: 5162041642537518248, guid: 555bce9d9f1404c098be83ebd4d619e4,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1523117612}
+    - target: {fileID: 5162041642537518249, guid: 555bce9d9f1404c098be83ebd4d619e4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7f5cfd7c8317d467a859656e791441e9, type: 2}
+    - target: {fileID: 5162041642623372205, guid: 555bce9d9f1404c098be83ebd4d619e4,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1063461218}
+    - target: {fileID: 5162041642727602012, guid: 555bce9d9f1404c098be83ebd4d619e4,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2090137796}
+    - target: {fileID: 5162041642727602013, guid: 555bce9d9f1404c098be83ebd4d619e4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7f5cfd7c8317d467a859656e791441e9, type: 2}
+    - target: {fileID: 5162041643243858340, guid: 555bce9d9f1404c098be83ebd4d619e4,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1870543704}
+    - target: {fileID: 5162041643243858341, guid: 555bce9d9f1404c098be83ebd4d619e4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7f5cfd7c8317d467a859656e791441e9, type: 2}
+    - target: {fileID: 5162041643296406491, guid: 555bce9d9f1404c098be83ebd4d619e4,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1677518885}
     - target: {fileID: 5162041643539654190, guid: 555bce9d9f1404c098be83ebd4d619e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2117,6 +2303,7 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2060659219}
+<<<<<<< HEAD
     - target: {fileID: 5162041642727602012, guid: 555bce9d9f1404c098be83ebd4d619e4,
         type: 3}
       propertyPath: m_Mesh
@@ -2172,5 +2359,7 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7f5cfd7c8317d467a859656e791441e9, type: 2}
+=======
+>>>>>>> 29cdae6f5e85cf8412530f6ec5205241ac777bcc
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 555bce9d9f1404c098be83ebd4d619e4, type: 3}
