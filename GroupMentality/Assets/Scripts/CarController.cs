@@ -16,7 +16,7 @@ public class CarController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 movement = Vector3.forward;
+        Vector3 movement = -transform.up;
 
         rb.AddForce(movement * speed);
     }
