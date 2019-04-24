@@ -6,17 +6,26 @@ using UnityEngine.SceneManagement;
 public class CarCollision : MonoBehaviour
 {
     public float pushForce = 20;
+    public GameObject RestartMenu;
+    private AudioSource audioSource;
+    public AudioClip Hurt;
 
     void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == "car")
         {
             Rigidbody rb = GetComponent<Rigidbody>();
-            Debug.Log("Collision");
-            //Vector3 dir = col.contacts[0].point - transform.position;
-            //dir = -dir.normalized;
+            
+            //Ragdoll
             rb.AddForce(1000 * Vector3.up);
             rb.constraints = RigidbodyConstraints.None;
+
+            //Audio
+            audioSource = GetComponent<AudioSource>();
+            audioSource.clip = Hurt;
+            audioSource.Play();
+
+            //Game over screen
             StartCoroutine("GameOver");
         }
     }
@@ -24,6 +33,7 @@ public class CarCollision : MonoBehaviour
     IEnumerator GameOver()
     {
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("GameOver");
+        Time.timeScale = 0;
+        Instantiate(RestartMenu, new Vector3(0, 0, 0), Quaternion.identity);
     }
 }
