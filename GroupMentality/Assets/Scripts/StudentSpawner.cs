@@ -6,10 +6,12 @@ public class StudentSpawner : MonoBehaviour
 {
     public Material[] materials;
     public GameObject[] students;
-    public int numStudents;
+    private int numStudents;
 
     void Start()
     {
+        numStudents = GameManager.instance.numStudents;
+
         int zOffset = 2;
         int xOffset = 0;
         int offsetScale = 2;

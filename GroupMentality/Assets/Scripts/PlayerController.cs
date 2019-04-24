@@ -22,4 +22,8 @@ public class PlayerController : MonoBehaviour
 
         transform.position += (camF * input.y + camR * input.x) * Time.deltaTime * speed;
     }
+
+    private void OnTriggerEnter(Collider GameManager.instance.station) {
+        GameManager.instance.NextScene();
+    }
 }

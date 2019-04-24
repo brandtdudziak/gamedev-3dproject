@@ -1,23 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
 
-    public static GameManager instance = null;
+    private static GameManager _instance;
+    public int numStudents = 1;
+    public string nextLevel;
+    public GameObject station;
 
-    private void Awake() {
-        
+    public static GameManager instance
+    {
+        get
+        {
+            if(_instance == null)
+            {
+                _instance = GameObject.FindObjectOfType<GameManager>();
+                if(_instance == null)
+                {
+                    throw new UnityException("Instance of GameManager not found in scene");
+                }
+            }
+            return _instance;
+        }
     }
 
-    void Start()
-    {
-        
+    private void Start() {
+        if(_instance != null)
+        {
+            Destroy(_instance.gameObject);
+        }
+        _instance = this;
     }
 
-    void Update()
+    public void NextScene()
     {
-        
+        SceneManager.LoadScene(nextLevel);
     }
 }
