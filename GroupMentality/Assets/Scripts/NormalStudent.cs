@@ -5,17 +5,26 @@ using UnityEngine;
 public class NormalStudent : Student
 {
 
-    public Transform target; // This is Benno's transform
+    private GameObject target; // This is Benno's transform
     private Rigidbody rb3d;
+    private Transform targetPosition;
+    float xdir;
 
 
     void Start()
     {
-        speed = 5f;
-        randomness = 3f;
+        speed = Random.Range(3f, 8f);
+
+        randomness = Random.Range(3f, 7f);
+
         minDistanceToFollow = 5f;
 
         rb3d = GetComponent<Rigidbody>();
+
+        target = GameObject.FindWithTag("Player");
+
+        targetPosition = target.GetComponent<Transform>();
+        xdir = Random.Range(-3f, 3f);
         
     }
 
@@ -30,7 +39,7 @@ public class NormalStudent : Student
     {
         Vector3 origin = transform.position;
 
-        Vector3 direction = target.position - origin;
+        Vector3 direction = targetPosition.position - origin;
 
         float distanceToPlayer = direction.magnitude;
        
@@ -44,12 +53,22 @@ public class NormalStudent : Student
 
         else
         {
-            rb3d.velocity = new Vector3(0, 0, 0);
+            Vector2 randomDir = SetTimer();
+            randomDir *= 5;
+
+            rb3d.velocity = new Vector3(randomDir.x, 0, randomDir.y);
         }
 
+    }
 
+    IEnumerator Timer ()
+    {
+        yield return new WaitForSecondsRealtime(7);
+    }
 
-
-
+    Vector2 SetTimer()
+    {
+        StartCoroutine(Timer());
+        return Random.insideUnitCircle;
     }
 }
