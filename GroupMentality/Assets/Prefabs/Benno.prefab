@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4771759952230429400}
   - component: {fileID: 7148360103432544508}
   - component: {fileID: 6768015695555706123}
+  - component: {fileID: 9108380427938436057}
+  - component: {fileID: 9190849090784780278}
   m_Layer: 0
   m_Name: Benno
   m_TagString: Untagged
@@ -111,6 +113,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!114 &9108380427938436057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4724142097176694519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3617ca787a8b4ed4388d83c2bc86c13a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  cam: {fileID: 0}
+--- !u!114 &9190849090784780278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4724142097176694519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 927d872fc28474840a731df8475d1f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushForce: 20
+  RestartMenu: {fileID: 0}
+  Hurt: {fileID: 0}
 --- !u!1 &8360879343105447132
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,11 +982,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1338043984640790963}
     m_Modifications:
-    - target: {fileID: 720665971278792862, guid: 11ae38408411147e48ddb91857b81629,
-        type: 3}
-      propertyPath: m_Name
-      value: StudentSpawner
-      objectReference: {fileID: 0}
     - target: {fileID: 720665971278792832, guid: 11ae38408411147e48ddb91857b81629,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1010,6 +1036,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720665971278792862, guid: 11ae38408411147e48ddb91857b81629,
+        type: 3}
+      propertyPath: m_Name
+      value: StudentSpawner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11ae38408411147e48ddb91857b81629, type: 3}
