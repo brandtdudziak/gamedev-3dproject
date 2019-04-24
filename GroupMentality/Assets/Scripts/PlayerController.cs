@@ -25,9 +25,10 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
+        Debug.Log("TRAIN");
         if(other.gameObject.CompareTag("Station"))
         {
-            GameManager.instance.NextScene();
+            GameManager.instance.EnterStation();
         }
     }
 }

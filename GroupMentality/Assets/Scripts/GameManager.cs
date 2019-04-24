@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
 
     private static GameManager _instance;
     public int numStudents = 1;
+    private int studentsAlive;
     public string nextLevel;
-    public GameObject station;
 
     public static GameManager instance
     {
@@ -33,10 +33,23 @@ public class GameManager : MonoBehaviour
             Destroy(_instance.gameObject);
         }
         _instance = this;
+
+        studentsAlive = numStudents;
+    }
+
+    public void EnterStation()
+    {
+        StationUI.instance.UpdateRemaining(studentsAlive, numStudents);
+        StationUI.instance.canvas.alpha = 1f;
     }
 
     public void NextScene()
     {
         SceneManager.LoadScene(nextLevel);
+    }
+
+    public void studentHit()
+    {
+        studentsAlive--;
     }
 }
