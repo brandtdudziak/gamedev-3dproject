@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider GameManager.instance.station) {
+    private void OnTriggerEnter(Collider other) {
         GameManager.instance.NextScene();
     }
 }
