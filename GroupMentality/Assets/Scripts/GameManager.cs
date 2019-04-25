@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private int studentsAlive;
     private int studentsWithin;
     public string nextLevel;
+    private bool within;
 
     public static GameManager instance
     {
@@ -37,17 +38,20 @@ public class GameManager : MonoBehaviour
 
         studentsAlive = numStudents;
         studentsWithin = 0;
+        within = false;
     }
 
     public void EnterStation()
     {
         StationUI.instance.UpdateRemaining(studentsWithin, studentsAlive);
         StationUI.instance.canvas.alpha = 1f;
+        within = true;
     }
 
     public void ExitStation()
     {
         StationUI.instance.canvas.alpha = 0f;
+        within = false;
     }
 
     public void StudentEnterStation()
@@ -62,6 +66,14 @@ public class GameManager : MonoBehaviour
         StationUI.instance.UpdateRemaining(studentsWithin, studentsAlive);
     }
 
+    public void StationE()
+    {
+        if(within)
+        {
+            NextScene();
+        }
+    }
+
     public void NextScene()
     {
         SceneManager.LoadScene(nextLevel);
@@ -70,5 +82,6 @@ public class GameManager : MonoBehaviour
     public void studentHit()
     {
         studentsAlive--;
+        StationUI.instance.UpdateRemaining(studentsWithin, studentsAlive);
     }
 }

@@ -7,6 +7,12 @@ public class PlayerController : MonoBehaviour
     public Transform cam;
     Vector2 input;
 
+    private void Update() {
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            GameManager.instance.StationE();
+        }
+    }
     void FixedUpdate()
     {
         input = new Vector2(Input.GetAxis("ADHorizontal"), Input.GetAxis("WSVertical"));
