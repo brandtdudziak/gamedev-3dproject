@@ -27,7 +27,14 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Station"))
         {
-            GameManager.instance.NextScene();
+            GameManager.instance.EnterStation();
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if(other.gameObject.CompareTag("Station"))
+        {
+            GameManager.instance.ExitStation();
         }
     }
 }

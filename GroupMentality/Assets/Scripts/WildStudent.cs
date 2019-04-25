@@ -147,6 +147,20 @@ public class WildStudent : Student
         return Random.insideUnitCircle;
 
     }
+
+    private void OnTriggerEnter(Collider other) {
+        if(other.gameObject.CompareTag("Station"))
+        {
+            GameManager.instance.StudentEnterStation();
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if(other.gameObject.CompareTag("Station"))
+        {
+            GameManager.instance.StudentExitStation();
+        }
+    }
 }
 
 
