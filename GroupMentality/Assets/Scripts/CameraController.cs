@@ -16,12 +16,12 @@ public class CameraController : MonoBehaviour
 
     public float distance = 10;
     public float minVerticalAngle = -80;
-    public float maxVerticalAngle = 80;
+    public float maxVerticalAngle = 0;
 
-    public float verticalMouseSpeed;
-    public float horizontalMouseSpeed;
-    public float verticalArrowSpeed;
-    public float horizontalArrowSpeed;
+    public float verticalMouseSpeed = 20;
+    public float horizontalMouseSpeed = 20;
+    public float verticalArrowSpeed = 50;
+    public float horizontalArrowSpeed = 50;
 
     private float angleX;
     private float angleY;
@@ -47,20 +47,7 @@ public class CameraController : MonoBehaviour
         offset = yRotation * offset;
         offset *= distance;
 
-        offset = AddObstacleAvoidance(offset);
-
         transform.position = target.position + offset;
         transform.rotation = Quaternion.LookRotation(target.position - transform.position, new Vector3(0, 1, 0));
-    }
-
-    Vector3 AddObstacleAvoidance(Vector3 targetToCamera)
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(target.position, targetToCamera, out hit, distance, obstacleLayerMask))
-        {
-            // if we hit an object between camera and target position the camera at (in front of) the hit object.
-            return hit.point;
-        }
-        return targetToCamera;
     }
 }
