@@ -1242,11 +1242,11 @@ MonoBehaviour:
     m_Bits: 0
   distance: 10
   minVerticalAngle: -80
-  maxVerticalAngle: 80
-  verticalMouseSpeed: 0
-  horizontalMouseSpeed: 0
-  verticalArrowSpeed: 0
-  horizontalArrowSpeed: 0
+  maxVerticalAngle: 0
+  verticalMouseSpeed: 20
+  horizontalMouseSpeed: 20
+  verticalArrowSpeed: 50
+  horizontalArrowSpeed: 50
 --- !u!1 &1144625194
 GameObject:
   m_ObjectHideFlags: 0
