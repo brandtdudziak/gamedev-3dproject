@@ -66,13 +66,17 @@ public class WildStudent : Student
             case "ShapeShifter":
                 ShapeShifterMovement();
                 break;
+
+            default:
+                RebelMovement();
+                break;
         }
     }
 
     // Movement behavior for the stubborn wild student
     public void StubbornMovement()
     {
-
+        rb3d.velocity = new Vector3(0, 0, 0);
     }
 
     // Movement behavior for the Shape shifting wild student

@@ -39,7 +39,10 @@ public class NormalStudent : Student
     {
         Vector3 origin = transform.position;
 
-        Vector3 direction = targetPosition.position - origin;
+        Vector2 randomDir = SetTimer();
+        randomDir *= 5;
+
+        Vector3 direction = targetPosition.position - origin + new Vector3(randomDir.x, 0, randomDir.y);
 
         float distanceToPlayer = direction.magnitude;
        
@@ -53,8 +56,6 @@ public class NormalStudent : Student
 
         else
         {
-            Vector2 randomDir = SetTimer();
-            randomDir *= 5;
 
             rb3d.velocity = new Vector3(randomDir.x, 0, randomDir.y);
         }
