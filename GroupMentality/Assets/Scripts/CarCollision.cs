@@ -15,6 +15,8 @@ public class CarCollision : MonoBehaviour
         if (col.gameObject.tag == "car")
         {
             Rigidbody rb = GetComponent<Rigidbody>();
+
+            rb.mass = 1;
             
             //Ragdoll
             rb.AddForce(1000 * Vector3.up);
