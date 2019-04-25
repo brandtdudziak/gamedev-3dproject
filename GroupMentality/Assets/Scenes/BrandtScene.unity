@@ -954,6 +954,11 @@ PrefabInstance:
       propertyPath: station
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4315605674625593353, guid: 6392dc7da64124cd882528f91fa22b7a,
+        type: 3}
+      propertyPath: numStudents
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6392dc7da64124cd882528f91fa22b7a, type: 3}
 --- !u!114 &4484995389295668107
