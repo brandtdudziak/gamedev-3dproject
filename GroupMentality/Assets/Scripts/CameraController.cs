@@ -28,7 +28,7 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        angleX = -45;
+        angleX = -10;
         angleY = 0;
     }
 
