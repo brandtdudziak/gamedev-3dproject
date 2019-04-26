@@ -18,7 +18,7 @@ public class StationUI : MonoBehaviour
                 _instance = GameObject.FindObjectOfType<StationUI>();
                 if(_instance == null)
                 {
-                    throw new UnityException("Instance of GameManager not found in scene");
+                    throw new UnityException("Instance of StationUI not found in scene");
                 }
             }
             return _instance;
