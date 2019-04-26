@@ -118,7 +118,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-21682
+  m_Name: pb_Mesh-32052
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -584,6 +584,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 6907176}
+    - target: {fileID: 5848417140985827334, guid: b46d75aaadef743fda07c40508616bd0,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 510974960}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b46d75aaadef743fda07c40508616bd0, type: 3}
 --- !u!1001 &501258682
@@ -685,6 +690,12 @@ PrefabInstance:
       objectReference: {fileID: 1541148965}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 748dd1f8cdab69248b68c6b6880ea672, type: 3}
+--- !u!4 &510974960 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1194389660235312869, guid: 4f1645b315b4b488e91be79d13bbadbb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1449224731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1144776764
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -356,13 +356,19 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!4 &205818099 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1194389660235312869, guid: 4f1645b315b4b488e91be79d13bbadbb,
+    type: 3}
+  m_PrefabInstance: {fileID: 91527304}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &336770603
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-28382
+  m_Name: pb_Mesh-30718
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1222,6 +1228,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 336770603}
+    - target: {fileID: 5848417140985827334, guid: b46d75aaadef743fda07c40508616bd0,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 205818099}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b46d75aaadef743fda07c40508616bd0, type: 3}
 --- !u!43 &976415105
