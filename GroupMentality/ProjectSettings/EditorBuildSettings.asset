@@ -11,7 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MattScene.unity
     guid: 1b4a1ccecb6d24b9f8b8ca6312bd286f
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: 4877f9ea2d7952543913260b384736e8
+    path: Assets/Scenes/Tutorial.unity
+    guid: 3c983d136b813d14aa02a68f05249aa8
+  - enabled: 1
+    path: Assets/Scenes/First Level.unity
+    guid: a69a075e0227c074c88e19b288b4a61f
   m_configObjects: {}
