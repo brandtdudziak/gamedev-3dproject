@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     private int studentsWithin;
     public string nextLevel;
     private bool within;
+    private AudioSource source;
+    public AudioClip clip;
 
     public static GameManager instance
     {
@@ -19,7 +21,7 @@ public class GameManager : MonoBehaviour
         {
             if(_instance == null)
             {
-                _instance = GameObject.FindObjectOfType<GameManager>();
+                _instance = FindObjectOfType<GameManager>();
                 if(_instance == null)
                 {
                     throw new UnityException("Instance of GameManager not found in scene");
@@ -39,6 +41,7 @@ public class GameManager : MonoBehaviour
         studentsAlive = numStudents;
         studentsWithin = 0;
         within = false;
+        source = GetComponent<AudioSource>();
     }
 
     public void EnterStation()
@@ -70,12 +73,17 @@ public class GameManager : MonoBehaviour
     {
         if(within)
         {
+
             NextScene();
         }
     }
 
     public void NextScene()
     {
+        source.PlayOneShot(clip);
+
+        StartCoroutine(Delay());
+
         SceneManager.LoadScene(nextLevel);
     }
 
@@ -83,5 +91,10 @@ public class GameManager : MonoBehaviour
     {
         studentsAlive--;
         StationUI.instance.UpdateRemaining(studentsWithin, studentsAlive);
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSecondsRealtime(10);
     }
 }

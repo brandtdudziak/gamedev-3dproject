@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 884230895272997322}
   m_Layer: 0
   m_Name: ShapeShifter
-  m_TagString: Untagged
+  m_TagString: Student
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

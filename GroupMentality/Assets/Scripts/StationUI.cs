@@ -8,6 +8,7 @@ public class StationUI : MonoBehaviour
     private static StationUI _instance;
     public Text studentsRemaining;
     public CanvasGroup canvas;
+    //public AudioClip sound;
 
     public static StationUI instance
     {
@@ -15,7 +16,7 @@ public class StationUI : MonoBehaviour
         {
             if(_instance == null)
             {
-                _instance = GameObject.FindObjectOfType<StationUI>();
+                _instance = FindObjectOfType<StationUI>();
                 if(_instance == null)
                 {
                     throw new UnityException("Instance of StationUI not found in scene");

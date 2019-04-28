@@ -49,4 +49,21 @@ public class PlayerController : MonoBehaviour
             GameManager.instance.ExitStation();
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Student"))
+        {
+            rb3d.mass = 10000f;
+        }
+
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.CompareTag("Student"))
+        {
+            rb3d.mass = 1000f;
+        }
+    }
 }

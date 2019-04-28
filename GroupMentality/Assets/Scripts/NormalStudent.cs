@@ -40,7 +40,7 @@ public class NormalStudent : Student
         Vector3 origin = transform.position;
 
         Vector2 randomDir = SetTimer();
-        randomDir *= 5;
+        randomDir *= 6;
 
         Vector3 direction = targetPosition.position - origin + new Vector3(randomDir.x, 0, randomDir.y);
 
@@ -64,7 +64,7 @@ public class NormalStudent : Student
 
     IEnumerator Timer ()
     {
-        yield return new WaitForSecondsRealtime(7);
+        yield return new WaitForSeconds(7);
     }
 
     Vector2 SetTimer()
