@@ -17,10 +17,11 @@ public class CarCollision : MonoBehaviour
             Rigidbody rb = GetComponent<Rigidbody>();
 
             rb.mass = 1;
-            
+
             //Ragdoll
-            rb.AddForce(1000 * Vector3.up);
             rb.constraints = RigidbodyConstraints.None;
+            rb.AddForce(1000 * Vector3.up);
+
 
             //Audio
             audioSource = GetComponent<AudioSource>();

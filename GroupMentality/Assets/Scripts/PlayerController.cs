@@ -7,6 +7,13 @@ public class PlayerController : MonoBehaviour
     public Transform cam;
     Vector2 input;
 
+    Rigidbody rb3d;
+
+    private void Start()
+    {
+        rb3d = GetComponent<Rigidbody>();
+    }
+
     private void Update() {
         if(Input.GetKeyDown(KeyCode.E))
         {
@@ -27,7 +34,6 @@ public class PlayerController : MonoBehaviour
         camR = camR.normalized;
 
         transform.position += (camF * input.y + camR * input.x) * Time.deltaTime * speed;
-
     }
 
     private void OnTriggerEnter(Collider other) {
