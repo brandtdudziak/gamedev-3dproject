@@ -73,7 +73,6 @@ public class GameManager : MonoBehaviour
     {
         if(within)
         {
-
             NextScene();
         }
     }
@@ -84,7 +83,8 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(Delay());
 
-        SceneManager.LoadScene(nextLevel);
+
+
     }
 
     public void studentHit()
@@ -95,6 +95,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator Delay()
     {
-        yield return new WaitForSecondsRealtime(10);
+        yield return new WaitForSeconds(5);
+        //Time.timeScale = 0;
+        SceneManager.LoadScene(nextLevel);
     }
 }

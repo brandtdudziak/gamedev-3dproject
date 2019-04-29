@@ -65,12 +65,16 @@ public class NormalStudent : Student
     IEnumerator Timer ()
     {
         yield return new WaitForSeconds(7);
+
     }
 
     Vector2 SetTimer()
     {
+
         StartCoroutine(Timer());
         return Random.insideUnitCircle;
+
+
     }
 
     private void OnTriggerEnter(Collider other) {
