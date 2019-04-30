@@ -76,7 +76,19 @@ public class WildStudent : Student
     // Movement behavior for the stubborn wild student
     public void StubbornMovement()
     {
-        rb3d.velocity = new Vector3(0, 0, 0);
+
+        if (Time.timeSinceLevelLoad %  3 <= 0f)
+        {
+            Vector3 origin = transform.position;
+            Vector3 direction = target.position - origin;
+
+            float distanceToPlayer = direction.magnitude;
+
+            direction.Normalize();
+
+            rb3d.velocity = direction * randomness * wildness;
+
+        }
     }
 
     // Movement behavior for the Shape shifting wild student
