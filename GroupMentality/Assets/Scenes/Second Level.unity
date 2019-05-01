@@ -1967,7 +1967,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1742
+  m_Name: pb_Mesh-40212
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -3423,7 +3423,7 @@ PrefabInstance:
     - target: {fileID: 4724142097176694519, guid: b46d75aaadef743fda07c40508616bd0,
         type: 3}
       propertyPath: m_Name
-      value: Benno
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1338043984640790963, guid: b46d75aaadef743fda07c40508616bd0,
         type: 3}
@@ -3433,7 +3433,7 @@ PrefabInstance:
     - target: {fileID: 1338043984640790963, guid: b46d75aaadef743fda07c40508616bd0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9
+      value: 2.23
       objectReference: {fileID: 0}
     - target: {fileID: 1338043984640790963, guid: b46d75aaadef743fda07c40508616bd0,
         type: 3}
