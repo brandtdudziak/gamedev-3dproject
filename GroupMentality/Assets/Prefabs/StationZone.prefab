@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4299017552145380169}
   m_Layer: 0
   m_Name: StationInsideFront
-  m_TagString: Station
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 7944101098639813510}
   - component: {fileID: 7944101098639813509}
   m_Layer: 0
-  m_Name: Station 1
+  m_Name: StationZone
   m_TagString: Station
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 8203655385262580723}
   m_Layer: 0
   m_Name: StationInsideTop
-  m_TagString: Station
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 8203655385295349226}
   m_Layer: 0
   m_Name: StationInsideLeft
-  m_TagString: Station
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 8203655385680593010}
   m_Layer: 0
   m_Name: StationInsideBack
-  m_TagString: Station
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 8203655386082461490}
   m_Layer: 0
   m_Name: StationInsideRight
-  m_TagString: Station
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
