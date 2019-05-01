@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
     public void NextScene()
     {
         source.PlayOneShot(clip);
+        ScoreManager.instance.AddScore(studentsWithin);
 
         StartCoroutine(Delay());
 
@@ -87,7 +88,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void studentHit()
+    public void StudentHit()
     {
         studentsAlive--;
         StationUI.instance.UpdateRemaining(studentsWithin, studentsAlive);
