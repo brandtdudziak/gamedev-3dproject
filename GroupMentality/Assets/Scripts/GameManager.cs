@@ -98,9 +98,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator Delay()
     {
-        //Time.timeScale = 0;
-        yield return new WaitForSeconds(5);
-        //Time.timeScale = 1;
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene(nextLevel);
     }
 }
