@@ -9,6 +9,7 @@ public class NormalStudent : Student
     private Rigidbody rb3d;
     private Transform targetPosition;
     float xdir;
+    private CarCollisionStudent carCollision;
 
 
     void Start()
@@ -25,14 +26,18 @@ public class NormalStudent : Student
 
         targetPosition = target.GetComponent<Transform>();
         xdir = Random.Range(-3f, 3f);
-        
+        carCollision = GetComponent<CarCollisionStudent>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //rb3d.velocity = new Vector3(0, 0, 0);
-        Move();
+        bool dead = carCollision.IsDead();
+        if (!dead)
+        {
+            Move();
+        }
     }
 
     public override void Move()
