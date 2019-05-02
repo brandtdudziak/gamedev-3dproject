@@ -35,7 +35,7 @@ public class WildStudent : Student
 
         target = player.GetComponent<Transform>(); // the transform of the player
 
-        speed = Random.Range(0f, 6f); 
+        speed = Random.Range(3f, 6f); 
 
         randomness = Random.Range(1f, 5f);
 
@@ -74,21 +74,21 @@ public class WildStudent : Student
     }
 
     // Movement behavior for the stubborn wild student
+    // Only move when the time elapsed since the level load is evenly divisible by 3.
     public void StubbornMovement()
     {
 
-        if (Time.timeSinceLevelLoad %  3 <= 0f)
-        {
             Vector3 origin = transform.position;
+
             Vector3 direction = target.position - origin;
 
             float distanceToPlayer = direction.magnitude;
 
             direction.Normalize();
 
-            rb3d.velocity = direction * randomness * wildness;
+            rb3d.velocity = direction * speed;
 
-        }
+
     }
 
     // Movement behavior for the Shape shifting wild student
