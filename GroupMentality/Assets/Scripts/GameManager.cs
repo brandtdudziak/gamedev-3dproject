@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     private static GameManager _instance;
     public int numStudents = 1;
+    public int numSpawners = 1;
     private int studentsAlive;
     private int studentsWithin;
     public string nextLevel;
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
         studentsWithin = 0;
         within = false;
         source = GetComponent<AudioSource>();
+        numStudents = numStudents * numSpawners;
     }
 
     public void EnterStation()
