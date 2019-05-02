@@ -36,6 +36,11 @@ public class CarCollisionStudent : MonoBehaviour
         }
     }
 
+    public bool IsDead()
+    {
+        return dead;
+    }
+
     IEnumerator RemoveStudent()
     {
         yield return new WaitForSeconds(2);
