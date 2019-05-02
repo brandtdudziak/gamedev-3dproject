@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     private bool within;
     private AudioSource source;
     public AudioClip clip;
+    private bool paused = false;
 
     public static GameManager instance
     {
