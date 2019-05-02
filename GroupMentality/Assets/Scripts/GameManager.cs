@@ -39,11 +39,10 @@ public class GameManager : MonoBehaviour
         }
         _instance = this;
 
-        studentsAlive = numStudents;
+        studentsAlive = numStudents * numSpawners;
         studentsWithin = 0;
         within = false;
         source = GetComponent<AudioSource>();
-        numStudents = numStudents * numSpawners;
     }
 
     public void EnterStation()
