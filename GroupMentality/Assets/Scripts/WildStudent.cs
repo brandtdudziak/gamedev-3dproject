@@ -7,6 +7,7 @@ public class WildStudent : Student
     private Transform target;
     private GameObject player;
     private Rigidbody rb3d;
+    private CarCollisionStudent carCollision;
 
 
     /// <summary>
@@ -35,7 +36,7 @@ public class WildStudent : Student
 
         target = player.GetComponent<Transform>(); // the transform of the player
 
-        speed = Random.Range(3f, 6f); 
+        speed = Random.Range(3f, 6f);
 
         randomness = Random.Range(1f, 5f);
 
@@ -44,13 +45,17 @@ public class WildStudent : Student
         wildness = index + 2;
 
         rb3d = GetComponent<Rigidbody>();
+        carCollision = GetComponent<CarCollisionStudent>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
+        bool dead = carCollision.IsDead();
+        if (!dead) {
+            Move();
+        }
     }
 
     public override void Move()
